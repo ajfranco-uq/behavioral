@@ -21,14 +21,10 @@ public class Main {
         controller.executeCommand(confirm);
         controller.executeCommand(prepare);
 
-        System.out.println(
-            "Current status: " + order.getStatus()
-        );
+        System.out.println("Current status: " + order.getStatus());
 
         controller.executeCommand(cancel);
 
-        System.out.println(
-            "Final status: " + order.getStatus()
-        );
+        System.out.println("Final status: " + order.getStatus());
     }
 }
