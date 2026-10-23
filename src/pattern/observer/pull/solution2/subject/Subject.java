@@ -1,4 +1,6 @@
-package pattern.observer.solution1;
+package pattern.observer.pull.solution2.subject;
+
+import pattern.observer.pull.solution2.observer.Observer;
 
 public interface Subject {
 

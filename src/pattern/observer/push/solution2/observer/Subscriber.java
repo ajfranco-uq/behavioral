@@ -1,6 +1,4 @@
-package pattern.observer.solution2.observer;
-
-import pattern.observer.solution2.observer.Observer;
+package pattern.observer.push.solution2.observer;
 
 public class Subscriber implements Observer {
 

@@ -1,4 +1,9 @@
-package pattern.observer.solution1;
+package pattern.observer.pull.solution1;
+
+import pattern.observer.pull.solution1.observer.CustomerObserver;
+import pattern.observer.pull.solution1.observer.MobileAppObserver;
+import pattern.observer.pull.solution1.observer.Observer;
+import pattern.observer.pull.solution1.subject.Product;
 
 public class Main {
 

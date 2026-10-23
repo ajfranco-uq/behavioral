@@ -1,4 +1,4 @@
-package pattern.observer.solution2.observer;
+package pattern.observer.push.solution2.observer;
 
 public interface Observer {
 

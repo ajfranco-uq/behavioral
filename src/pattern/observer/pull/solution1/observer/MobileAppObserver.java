@@ -1,4 +1,6 @@
-package pattern.observer.solution1;
+package pattern.observer.pull.solution1.observer;
+
+import pattern.observer.pull.solution1.subject.Product;
 
 public class MobileAppObserver implements Observer {
 

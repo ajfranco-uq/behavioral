@@ -1,16 +1,14 @@
-package pattern.observer.solution2.subject;
+package pattern.observer.pull.solution2.subject;
 
-import pattern.observer.solution2.observer.Observer;
-import pattern.observer.solution2.subject.Subject;
+import pattern.observer.pull.solution2.observer.Observer;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class YouTubeChannel implements Subject {
 
-    private String name;
+    private final String name;
     private String latestVideo;
-
     private final List<Observer> observers = new ArrayList<>();
 
     public YouTubeChannel(String name) {
@@ -30,13 +28,13 @@ public class YouTubeChannel implements Subject {
     @Override
     public void notifyObservers() {
         for (Observer observer : observers) {
-            observer.update(latestVideo);
+            observer.update(this);// referencia a sí mismo (this), de manera que cada observer pueda consultar sus datos.
         }
     }
 
     public void publishVideo(String title) {
         this.latestVideo = title;
-        System.out.println("New video published: " + title);
+        System.out.println(name + " published a new video.");
         notifyObservers();
     }
 

@@ -1,20 +1,19 @@
-package pattern.observer.solution1;
+package pattern.observer.push.solution2.subject;
+
+import pattern.observer.push.solution2.observer.Observer;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Product implements Subject {
+public class YouTubeChannel implements Subject {
 
     private String name;
-    private double price;
-    private int stock;
+    private String latestVideo;
 
     private final List<Observer> observers = new ArrayList<>();
 
-    public Product(String name, double price, int stock) {
+    public YouTubeChannel(String name) {
         this.name = name;
-        this.price = price;
-        this.stock = stock;
     }
 
     @Override
@@ -30,17 +29,13 @@ public class Product implements Subject {
     @Override
     public void notifyObservers() {
         for (Observer observer : observers) {
-            observer.update(this);
+            observer.update(latestVideo);// modificaiones
         }
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-        notifyObservers();
-    }
-
-    public void setStock(int stock) {
-        this.stock = stock;
+    public void publishVideo(String title) {
+        this.latestVideo = title;
+        System.out.println("New video published: " + title);
         notifyObservers();
     }
 
@@ -48,11 +43,7 @@ public class Product implements Subject {
         return name;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-    public int getStock() {
-        return stock;
+    public String getLatestVideo() {
+        return latestVideo;
     }
 }

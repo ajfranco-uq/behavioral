@@ -1,9 +1,9 @@
-package pattern.observer.solution2;
+package pattern.observer.push.solution2;
 
-import pattern.observer.solution2.observer.MobileApp;
-import pattern.observer.solution2.observer.Observer;
-import pattern.observer.solution2.subject.YouTubeChannel;
-import pattern.observer.solution2.observer.Subscriber;
+import pattern.observer.push.solution2.observer.MobileApp;
+import pattern.observer.push.solution2.observer.Observer;
+import pattern.observer.push.solution2.subject.YouTubeChannel;
+import pattern.observer.push.solution2.observer.Subscriber;
 
 public class Main {
 
