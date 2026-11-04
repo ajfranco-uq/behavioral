@@ -23,16 +23,13 @@ public class CardInsertedState implements ATMState {
 
             atm.incrementPinAttempts();
 
-            int remaining =
-                MAX_ATTEMPTS - atm.getPinAttempts();
+            int remaining = MAX_ATTEMPTS - atm.getPinAttempts();
 
             System.out.println("Incorrect PIN.");
 
             if (remaining > 0) {
 
-                System.out.println(
-                    "Remaining attempts: " + remaining
-                );
+                System.out.println("Remaining attempts: " + remaining);
 
             } else {
 
